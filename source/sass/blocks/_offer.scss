@@ -1,0 +1,120 @@
+.offer {
+  margin-top: 10rem;
+  $btn-shadow:-7px 9px 15px 0px hsla(0, 0%, 0%, 0.08);
+  &__body {
+    background-color: var(--clr-yellow-light);
+    background-image: url('../../img/consult/candle-images.svg');
+    background-repeat: no-repeat;
+    background-size: rem(309);
+    background-position: 42rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-height: rem(120);
+    padding: 0 rem(41);
+    border-radius: 4px;
+  }
+  &__image{
+    max-width: rem(220);
+    position: absolute;
+    left: 0;
+    top: 1px;
+    img, picture {
+      height: 100%;
+    }
+  }
+  &__link {
+    // margin-left: auto;
+    box-shadow: $btn-shadow;
+    background-color: var(--clr-white);
+    font-weight: 500;
+    transition: 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+  &__content {
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: rem(992);
+    width: 100%;
+  }
+  &__heading {
+    font-size: clamp(rem(20), vw(24), rem(24));
+    line-height: 141%;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  &__subheading {
+    font-size: clamp(rem(14), vw(18), rem(18));
+    line-height: 188%;
+    span {
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@include max-width(81.25em) {
+  .offer {
+    &__content {
+      max-width: rem(850);
+    }
+  }
+}
+
+@include max-width(71.875em) {
+  .offer {
+    &__content {
+      max-width: rem(750);
+    }
+  }
+}
+
+@include max-width(65.625em) {
+  .offer {
+    &__content {
+      max-width: rem(650);
+    }
+  }
+}
+
+@include max-width($tm) {
+  .offer {
+    &__body {
+      padding: rem(20) rem(25);
+    }
+    &__content {
+      flex-direction: column;
+      margin-left: auto;
+      max-width: fit-content;
+      grid-gap: 10px 0;
+    }
+    &__image {
+      max-width: rem(291.2);
+    }
+  }
+}
+
+@include max-width($mm) {
+  .offer {
+    &__content {
+      margin-right: auto;
+      margin-left: unset;
+      align-items: flex-start;
+    }
+    &__image {
+      max-width: rem(177);
+      top: unset;
+      left: unset;
+      right: 0;
+      bottom: 0;
+      transform: scaleX(-1);
+    }
+    &__link {
+      padding: rem(10) rem(20);
+    }
+  }
+}

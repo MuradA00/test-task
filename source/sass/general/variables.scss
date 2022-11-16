@@ -1,0 +1,68 @@
+:root {
+  // font
+  --ff: 'FF Good Pro', sans-serif;
+  // color
+  --bg-hero: background: linear-gradient(89.97deg, #F8F7FD 5.12%, #F2F0FF 95.31%);
+  --clr-yellow: hsla(50, 100%, 62%, 1);
+  --clr-yellow-light: hsla(50, 98%, 75%, 1);
+  --clr-black-15: hsla(0, 0%, 15%, 1);
+  --clr-black-light: hsla(0, 0%, 27%, 1);
+  --clr-dark-20: hsla(0, 0%, 20%, 1);
+  --clr-dark-10: hsla(0, 0%, 10%, 1);
+  --clr-dark-28: hsla(0, 0%, 28%, 1);
+  --clr-light-35: hsla(0, 0%, 35%, 1);
+  --clr-white: hsla(0, 0%, 100%, 1);
+  --clr-red: hsla(0, 57%, 59%, 1);
+  --clr-blue: hsla(221, 85%, 57%, 1);
+  --bg-info-btn: hsla(223, 71%, 65%, 1);
+  --clr-blue-light: hsla(223, 71%, 65%, 1);
+  --price-bg: hsla(222, 62%, 97%, 1);
+  --member-box-shadow: -9px 9px 54px 0px hsla(227, 26%, 39%, 0.1);
+  // spacing
+  --spc-40: rem(40);
+  --spc-55: rem(55);
+  // shadow
+  --white-box-shadow: -9px 9px 54px 0px hsla(227, 26%, 39%, 0.1);
+}
+
+$cont-padding: clamp(rem(12.5), vw(20), rem(20));
+$container-width: rem(1320);
+$tm: 59.375em;
+$mm: 43.75em;
+
+.main-container {
+  padding: 0 $cont-padding;
+  max-width: calc($container-width + $cont-padding);
+  margin-inline: auto;
+  width: 100%;
+  @include max-width($tm) {
+    max-width: calc(43.75rem + $cont-padding);
+  }
+  @include max-width($mm) {
+    max-width: calc(31.25em + $cont-padding);
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: rem(15) rem(30);
+  border-radius: 6px;
+  font-size: clamp(16px, vw(18), rem(18));
+  font-weight: normal;
+  line-height: 130%;
+  transition: 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  &:hover {
+    transform: scale(1.03);
+  }
+  &--yellow {
+    background-color: var(--clr-yellow);
+    color: var(--clr-dark-20);
+    padding: rem(25) rem(30);
+  }
+}
+
+
+

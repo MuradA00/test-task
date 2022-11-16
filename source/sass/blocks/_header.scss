@@ -1,0 +1,43 @@
+.header {
+  border-bottom: 1px solid hsla(249, 39%, 93%, 1);
+  background-color: var(--clr-white);
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: rem(17.5) 0;
+  }
+  &__logo {
+    transition: 350ms ease;
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+  &__btn-row {
+    display: flex;
+    grid-gap: rem(20);
+  }
+  &__consult {
+    color: var(--clr-blue);
+    font-size: clamp(0.9375rem, vw(18), rem(18));
+    outline: 1px solid var(--clr-blue);
+  }
+  &__mob-body {
+    display: none;
+  }
+  &__options {
+    display: flex;
+    align-items: center;
+    grid-gap: rem(25);
+  }
+}
+
+@include max-width($tm) {
+  .header {
+    &__logo {
+      max-width: rem(235);
+    }
+  }
+}
+

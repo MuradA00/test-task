@@ -1,0 +1,119 @@
+.expert {
+  &__inner {
+  }
+  &__slider {
+    max-width: rem(990);
+    margin-left: auto;
+  }
+}
+
+.slider-exp {
+  // display: flex;
+  align-items: center;
+  &__member-photo {
+    position: absolute;
+    left: -8rem;
+    box-shadow: -1px -2px 23px 0px hsla(223, 12%, 44%, 0.1) inset;
+    border: 22.5px solid hsla(240, 43%, 99%, 1);
+    border-radius: 50%;
+    top: 1.7rem;
+  }
+  &__column {
+    display: grid;
+    grid-template-columns: rem(350) rem(308);
+    justify-content: space-between;
+    & > * {
+      color: var(--clr-black-15);
+    }
+  }
+  &__descr {
+    display: grid;
+    grid-gap: rem(15) 0;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  &__name {
+    margin-bottom: rem(19);
+    font-size: rem(25);
+    font-weight: 500;
+    line-height: 100%;
+  }
+  &__role {
+    display: flex;
+    align-items: center;
+    grid-gap: 4px;
+    font-size: rem(18);
+    margin-bottom: rem(30);
+    line-height: 155%;
+    span {
+      font-weight: 500;
+    }
+    img {
+      width: 23px;
+    }
+  }
+  &__total {
+    font-weight: 500;
+  }
+  &__enroll {
+    max-width: rem(252);
+    margin-left: auto;
+    margin-top: rem(15);
+  }
+  &__format {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__status {
+    display: flex;
+    align-items: center;
+    grid-gap: rem(6);
+    span {
+      width: rem(8);
+      height: rem(8);
+      background-color: hsla(112, 72%, 47%, 1);
+      border-radius: 50%;
+    }
+  }
+  &__quote {
+    background-color: var(--price-bg);
+    padding: rem(15) rem(20);
+    display: flex;
+    align-items: center;
+    grid-gap: rem(15);
+    font-style: italic;
+    line-height: 160%;
+    font-size: rem(15);
+    border-radius: 6px;
+  }
+  &__quote-icon {
+    width: rem(45);
+    flex: 0 0 auto;
+  }
+  &__role-descr {
+    margin-bottom: rem(30);
+    p {
+      font-size: 1rem;
+      color: var(--clr-dark-28);
+      line-height: 175%;
+    }
+  }
+  &__def {
+    display: flex;
+    align-items: center;
+    grid-gap: 8px;
+  }
+  &__def-text {
+    font-size: 1rem;
+    line-height: 175%;
+  }
+  &__total {
+    font-size: 1.125rem;
+    line-height: 138%;
+  }
+}

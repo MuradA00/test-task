@@ -1,0 +1,126 @@
+.info {
+  margin-top: rem(134);
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: rem(42);
+  }
+  &__pannel {
+    box-shadow: var(--white-box-shadow);
+    border-radius: 13px;
+    padding: rem(40) rem(30) rem(50) rem(40);
+  }
+  &__title {
+    margin-bottom: rem(50);
+  }
+}
+
+.info-row {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: rem(15);
+  &__btn {
+    cursor: pointer;
+    background-color: hsla(240, 100%, 99%, 1);
+    outline: 1px solid hsla(209, 27%, 82%, 1);
+    font-size: 1rem;
+    border-radius: 27px;
+    padding: rem(15) rem(20);
+    transition: 300ms ease;
+    color: hsla(0, 6%, 2%, 1);
+    line-height: 156%;
+    &:hover {
+      outline: 1px solid var(--bg-info-btn);
+    }
+  }
+}
+
+.answers {
+  & > * {
+    color: var(--clr-black-15);
+  }
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: rem(18);
+    span {
+      font-size: rem(25);
+      line-height: 152%;
+      font-weight: 500;
+      // max-width: rem(455);
+      white-space: wrap;
+    }
+  }
+  &__inner-text {
+    p {
+      font-size: 1rem;
+      line-height: 193%;
+    }
+  }
+}
+
+.active-info-btn {
+  outline: none ;
+  background-color: var(--bg-info-btn);
+  color: var(--clr-white);
+}
+
+.content-show {
+  display: block !important;
+  animation: fade 600ms ease;
+}
+
+.answers {
+  &__item {
+    display: none;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(rem(7));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@include max-width(80em) {
+  .info {
+    &__inner {
+      max-width: rem(700);
+      margin-inline: auto;
+      grid-template-columns: 100%;
+    }
+  }
+  .info-row {
+    justify-content: center;
+  }
+}
+
+@include max-width($mm) {
+  .info-row {
+    grid-gap: rem(10);
+    justify-content: flex-start;
+    &__btn {
+      padding: rem(7.5) rem(15);
+      font-size: rem(13);
+    }
+  }
+  .info {
+    &__pannel {
+      padding: rem(25);
+    }
+  }
+  .answers {
+    &__heading {
+      span {
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
